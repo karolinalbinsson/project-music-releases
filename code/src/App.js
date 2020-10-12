@@ -18,18 +18,23 @@ albumArray.forEach((album) => {
 
 export const App = () => {
   return (
-    <div className="app-container">
-      <h1 className="app-header">New albums and singles</h1>
-      {albumArray.map((album) => {
-        return (
-          <Album
-            key={album.name}
-            albumName={album.name}
-            albumImage={album.images[1].url}
-            albumUrl={album.external_urls.spotify}
-            artists={album.artists}
-          />)
-      })}
-    </div>
+    <>
+      <header>
+        <h1 className="app-header">New albums & singles</h1>
+      </header>
+      <section className="app-container">
+
+        {albumArray.map((album) => {
+          return (
+            <Album
+              key={album.name}
+              albumName={album.name}
+              albumImage={album.images[1].url}
+              albumUrl={album.external_urls.spotify}
+              artists={album.artists}
+            />)
+        })}
+      </section>
+    </>
   );
 };
