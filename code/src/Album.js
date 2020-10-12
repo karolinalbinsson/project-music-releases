@@ -8,7 +8,7 @@ export const Album = (props) => {
       <a className="album-link" href={props.albumUrl}>
         <img className="album-image" src={props.albumImage} alt="album" />
         <p className="album-name">{props.albumName}</p>
-        {/*<ActionBar />*/}
+        <ActionBar />
       </a>
       <div className="artist-container">
         {props.artists.map((artist) => {
