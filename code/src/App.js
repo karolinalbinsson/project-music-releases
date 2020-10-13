@@ -1,14 +1,7 @@
 import React from "react";
 import data from "./data.json";
 import { Album } from "./Album";
-/*
-- Album cover image
-- Album name
-- Album external URL
 
-- Artist external URL
-- Artister
-*/
 console.log(data);
 const albumArray = data.albums.items;
 
@@ -19,8 +12,8 @@ albumArray.forEach((album) => {
 export const App = () => {
   return (
     <>
-      <header>
-        <h1 className="app-header">New albums & singles</h1>
+      <header className="header">
+        <h1 className="app-header">New albums &amp; singles</h1>
       </header>
       <section className="app-container">
 
