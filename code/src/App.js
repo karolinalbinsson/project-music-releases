@@ -3,8 +3,11 @@ import data from "./data.json";
 import { Album } from "./Album";
 
 console.log(data);
-const albumArray = data.albums.items;
-
+const resultArray = data.albums.items;
+const albumArray = resultArray.filter(album => album.album_type ==="album");
+console.log(albumArray);
+const singlesArray = resultArray.filter(album => album.album_type ==="single");
+console.log(singlesArray);
 albumArray.forEach((album) => {
   console.log(album.name);
 });
@@ -15,8 +18,8 @@ export const App = () => {
       <header className="header">
         <h1 className="app-header">New albums &amp; singles</h1>
       </header>
+      <fieldset><legend>Albums</legend>
       <section className="app-container">
-
         {albumArray.map((album) => {
           return (
             <Album
@@ -28,6 +31,21 @@ export const App = () => {
             />)
         })}
       </section>
+      </fieldset>
+      <fieldset><legend>Singles</legend>
+      <section className="app-container">
+        {singlesArray.map((album) => {
+          return (
+            <Album
+              key={album.name}
+              albumName={album.name}
+              albumImage={album.images[1].url}
+              albumUrl={album.external_urls.spotify}
+              artists={album.artists}
+            />)
+        })}
+      </section>
+      </fieldset>
     </>
   );
 };
