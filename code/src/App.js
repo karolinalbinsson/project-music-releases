@@ -1,6 +1,6 @@
 import React from "react";
 import data from "./data.json";
-import { Album } from "./Album";
+import {AlbumGallery} from "./AlbumGallery"
 
 console.log(data);
 const resultArray = data.albums.items;
@@ -18,36 +18,16 @@ export const App = () => {
       <header className="header">
         <h1 className="app-header">New albums &amp; singles</h1>
       </header>
-      <section className ="wrapper">
-        <h2 className="section-header">Albums</h2>
-      <div className="app-container">
-        {albumArray.map((album) => {
-          return (
-            <Album
-              key={album.name}
-              albumName={album.name}
-              albumImage={album.images[1].url}
-              albumUrl={album.external_urls.spotify}
-              artists={album.artists}
-            />)
-        })}
-      </div>
-      </section>
-      <section className="wrapper">
-      <h2 className="section-header">Singles</h2>
-      <div className="app-container">
-        {singlesArray.map((album) => {
-          return (
-            <Album
-              key={album.name}
-              albumName={album.name}
-              albumImage={album.images[1].url}
-              albumUrl={album.external_urls.spotify}
-              artists={album.artists}
-            />)
-        })}
-      </div>
-      </section>
+      <AlbumGallery
+        key={"1"}
+        data={albumArray}
+        title="Albums" 
+      />
+      <AlbumGallery
+        key={"2"}
+        data={singlesArray}
+        title="Singles"  
+      />
     </>
   );
 };
