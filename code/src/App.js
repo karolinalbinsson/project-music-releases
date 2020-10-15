@@ -18,8 +18,9 @@ export const App = () => {
       <header className="header">
         <h1 className="app-header">New albums &amp; singles</h1>
       </header>
-      <fieldset><legend>Albums</legend>
-      <section className="app-container">
+      <section className ="wrapper">
+        <h2 className="section-header">Albums</h2>
+      <div className="app-container">
         {albumArray.map((album) => {
           return (
             <Album
@@ -30,10 +31,11 @@ export const App = () => {
               artists={album.artists}
             />)
         })}
+      </div>
       </section>
-      </fieldset>
-      <fieldset><legend>Singles</legend>
-      <section className="app-container">
+      <section className="wrapper">
+      <h2 className="section-header">Singles</h2>
+      <div className="app-container">
         {singlesArray.map((album) => {
           return (
             <Album
@@ -44,8 +46,8 @@ export const App = () => {
               artists={album.artists}
             />)
         })}
+      </div>
       </section>
-      </fieldset>
     </>
   );
 };
