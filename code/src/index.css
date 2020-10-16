@@ -170,10 +170,15 @@ a {
 	color: #fff;
 	width: 72px;
 	text-align: center;
+	display: none;
 }
 
 .playlist-image {
 	width: 72px;
+}
+
+.playlist-item:hover {
+	transform: scale(1.2);
 }
 
 /*Media queries*/
@@ -204,6 +209,7 @@ a {
 	.playlist-header {
 		width: unset;
 		text-align: unset;
+		display: block;
 	}
 
 	.playlist-image {
