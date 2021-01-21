@@ -1,6 +1,6 @@
 # Music Releases
 
-This weeks project was to get started with react components by building a page containing recent music releases. The data was provided to us in a file, containing a download of an API-response from Spotify. 
+This weeks project was to get started with react components by building a page containing recent music releases. The data was provided to us in a file, containing a download of an API-response from Spotify. This project was a collab with Ylva Nilsson.
 
 ## The problem
 
